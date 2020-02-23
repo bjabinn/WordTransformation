@@ -33,7 +33,7 @@ namespace WordTransformation.Controllers
             foreach (Match match in regex.Matches(jsonString))
             {
                 string id = match.Value.Replace("<q id=", "").Replace(">", "");
-                jsonString = jsonString.Replace($"<q id={id}>", $"<span class=\\\"nowrap\\\"><strong>{id}</strong> <input type=\\\"text\\\" id=\\\"q{id}\\\" size=\\\"10\\\" maxlength=\\\"50\\\"></span>");
+                jsonString = jsonString.Replace($"<q id={id}>", $"<span class=\\\"nowrap form-group\\\"><strong>{id}</strong> <input type=\\\"text\\\" id=\\\"q{id}\\\" size=\\\"10\\\" maxlength=\\\"50\\\"></span>");
             }
 
 

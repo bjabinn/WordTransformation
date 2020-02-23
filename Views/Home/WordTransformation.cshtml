@@ -15,7 +15,8 @@
         <ul style="list-style-type:none;padding:10px;">
         @foreach(var word in Model.Words)
         {
-            <li>@word.WordId @word.WordToShow</li>
+            var identAnswer = $"r{@word.WordId}";
+            <li>@word.WordId <span id=@identAnswer>@word.WordToShow</span></li>
         }
         </ul>
     </div>
